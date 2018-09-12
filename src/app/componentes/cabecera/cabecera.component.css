@@ -6,6 +6,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+
+    /* Agregados */
+
+    background-color:#71E563
 }
 
 
@@ -15,7 +19,7 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-color: #3E06B0;
+color: #0C081B;
 }
 
 .hero-text a {
@@ -23,8 +27,8 @@ border: none;
 outline: 0;
 display: inline-block;
 padding: 10px 25px;
-color: black;
-background-color: #ddd;
+color: grey;
+background-color: #102309;
 text-align: center;
 cursor: pointer;
 }

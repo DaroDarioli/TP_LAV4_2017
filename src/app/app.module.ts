@@ -7,6 +7,7 @@ import { ListadoDeResultadosComponent } from './componentes/listado-de-resultado
 import { LoginComponent } from './componentes/login/login.component';
 //  import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HttpModule } from '@angular/http';
+import {HttpClientModule} from '@angular/common/http';
 
 // import { AccordionModule } from 'ngx-bootstrap';
 // agrego las clases para utilizar ruteo
@@ -87,6 +88,7 @@ import { CrucigramaDigitalComponent } from './componentes/crucigrama-digital/cru
     FormsModule,
     RuteandoModule,
     HttpModule,
+    HttpClientModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
     })

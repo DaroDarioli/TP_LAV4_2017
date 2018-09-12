@@ -13,11 +13,15 @@
     <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">×</span>
     <form class="modal-content animate" >
       <div class="container">
+          <label><b>Usuario</b></label>
+          <input type="text" placeholder="Ingresa tu correo"  [(ngModel)]="usuario" name="usuario" required>
+
+
         <label><b>Email</b></label>
-        <input type="text" placeholder="Ingresa tu correo" name="email" required>
-  
+        <input type="text" placeholder="Ingresa tu correo"  [(ngModel)]="name" name="email" required>
+      
         <label><b>Clave</b></label>
-        <input type="password" placeholder="Aca la clave" name="psw" required>
+        <input type="password" placeholder="Aca la clave"  [(ngModel)]="psw" name="psw" required>
   
         <label><b>Repita la clave</b></label>
         <input type="password" placeholder="Aca repeti la misa clave  de arriba" name="psw-repeat" required>
@@ -26,7 +30,7 @@
   
         <div class="clearfix">
           <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Me arrepenti</button>
-          <button type="submit" class="signupbtn">Registrarme</button>
+          <button type="submit" class="signupbtn" (click)="RegistrarUsuario()">Registrarme</button>
         </div>
       </div>
     </form>

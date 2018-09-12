@@ -5,9 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './crucigrama-digital.component.html',
   styleUrls: ['./crucigrama-digital.component.css']
 })
+
+
 export class CrucigramaDigitalComponent implements OnInit {
 
-  constructor() { }
+  Titulo = " Una letra";
+  cA1= "A";
+  cA2= "B"
+  name: string = '';
+  constructor() {    
+   }
 
   clasesBotones = {'btnPresionado': false, 'btnNormal':true};
 
@@ -17,6 +24,12 @@ export class CrucigramaDigitalComponent implements OnInit {
     console.info("Inico Palabras Rápidas"); 
 
     
+  }
+
+  setValue() { 
+    
+  console.log(this.name)
+  
   }
 
   verificar(boton)

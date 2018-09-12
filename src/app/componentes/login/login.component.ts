@@ -1,8 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
+import { MiHttpService } from '../../servicios/mi-http/mi-http.service'; 
+
 import {Subscription} from "rxjs";
 import {TimerObservable} from "rxjs/observable/TimerObservable";
+import { Jugador } from '../../clases/jugador';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -12,15 +15,16 @@ export class LoginComponent implements OnInit {
 
   private subscription: Subscription;
   usuario = '';
-  clave= '';
+  psw= '';
   progreso: number;
   progresoMensaje="esperando..."; 
   logeando=true;
   ProgresoDeAncho:string;
+  unJugador:Jugador;
 
   clase="progress-bar progress-bar-info progress-bar-striped ";
 
-  constructor(
+  constructor(private MiHttpService:MiHttpService,
     private route: ActivatedRoute,
     private router: Router) {
       this.progreso=0;
@@ -32,9 +36,16 @@ export class LoginComponent implements OnInit {
   }
 
   Entrar() {
-    if (this.usuario === 'admin' && this.clave === 'admin') {
+    //if (this.usuario === 'admin' && this.psw === 'admin') {     
+     //console.log("En funcion entrar")
+
+     let respuesta = this.MiHttpService.httpPostP("http://localhost/AngularApi/API/loginWEB/login?pass="+this.psw+"&usuario="+this.usuario,Jugador)
+      
+     //console.log(respuesta);
+
+
       this.router.navigate(['/Principal']);
-    }
+    //}
   }
   MoverBarraDeProgreso() {
     

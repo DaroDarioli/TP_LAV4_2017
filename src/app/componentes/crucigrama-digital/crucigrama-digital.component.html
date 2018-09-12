@@ -1,19 +1,21 @@
 <p>
  
 </p>
-<h1> en construcción :)!</h1>
+<h1>{{Titulo}}</h1>
+
+<input [(ngModel)]="name" #ctrl="ngModel" required> 
+<p>Value: {{ name }}</p>
+<button (click)="setValue()">Set value</button>
 
 <div class="container">
+     <div class="row">        
+        <button (click)="status=!status" class="btnNormal" id="ww"[ngClass]="status ? 'success' : 'danger'">{{cA1}}</button>
+        <button (click)="status=!status" class="btnNormal" id="xx"[ngClass]="status ? 'success' : 'danger'">{{cA2}}</button>
 
-        <div (click)="status=!status"  
-        [ngClass]="status ? 'success' : 'danger'">                
-         Some content
-    </div>
-    <!-- <div class="row">
-        <button type="button" id="a1" [ngClass]="clasesBotones" (click)="verificar($event)">X</button>
-        <button type="button" id="a2" [ngClass]="clasesBotones" (click)="verificar($event)">X</button>
-        <button type="button" id="a3" class="btnNormal">X</button>
-        <button type="button" id="a4" class="btnNormal">X</button>
+
+        
+        <button type="button" id="#" class="btnNormal">X</button>
+        <button type="button" id="#" class="btnNormal">X</button>
         <button type="button" id="#" class="btnNormal">X</button>
         <button type="button" id="#" class="btnNormal">X</button>
         <button type="button" id="#" class="btnNormal">X</button>
@@ -23,7 +25,7 @@
         <button type="button" id="#" class="btnNormal">X</button>
         <button type="button" id="#" class="btnNormal">X</button>
     </div>
-    <div class="row">
+    <!--<div class="row">
         <button type="button" id="#" class="btnNormal">X</button>
         <button type="button" id="#" class="btnNormal">X</button>
         <button type="button" id="#" class="btnNormal">X</button>
