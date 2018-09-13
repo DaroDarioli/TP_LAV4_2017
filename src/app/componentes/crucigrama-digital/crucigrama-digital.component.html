@@ -7,25 +7,33 @@
 <p>Value: {{ name }}</p>
 <button (click)="setValue()">Set value</button>
 
+<!-- 
+<input class="btn" (click)="muteStream()"  type="button"
+          [ngClass]="status ? 'btn-success' : 'btn-danger'" 
+          [value]="status ? 'unmute' : 'mute'"/>
+
+          <input class="btn" (click)="muteStream()"  type="button"
+          [ngClass]="status ? 'btn-success' : 'btn-danger'" 
+          [value]="status1 ? 'unmute' : 'mute'"/> -->
+
 <div class="container">
-     <div class="row">        
-        <button (click)="status=!status" class="btnNormal" id="ww"[ngClass]="status ? 'success' : 'danger'">{{cA1}}</button>
-        <button (click)="status=!status" class="btnNormal" id="xx"[ngClass]="status ? 'success' : 'danger'">{{cA2}}</button>
-
-
+     <div class="row">         
+        <button (click)="verificar($event)" class="btnNormal" id="CA0">{{A0}}</button>
+        <button (click)="verificar($event)" class="btnNormal" id="A1">{{A1}}</button>
+        <button (click)="verificar($event)" class="btnNormal" id="A2">{{A2}}</button>
+        <button (click)="verificar($event)" class="btnNormal" id="A3">{{A3}}</button>
+        <button (click)="verificar($event)" class="btnNormal" id="A4">{{A4}}</button>
+        <button (click)="verificar($event)" class="btnNormal" id="A5">{{A5}}</button>
+        <button (click)="verificar($event)" class="btnNormal" id="A6">{{A6}}</button>
+        <button (click)="verificar($event)" class="btnNormal" id="A7">{{A7}}</button>
+        <button (click)="verificar($event)" class="btnNormal" id="A8">{{A8}}</button>
+        <button (click)="verificar($event)" class="btnNormal" id="A9">{{A9}}</button>        
         
-        <button type="button" id="#" class="btnNormal">X</button>
-        <button type="button" id="#" class="btnNormal">X</button>
-        <button type="button" id="#" class="btnNormal">X</button>
-        <button type="button" id="#" class="btnNormal">X</button>
-        <button type="button" id="#" class="btnNormal">X</button>
-        <button type="button" id="#" class="btnNormal">X</button>
-        <button type="button" id="#" class="btnNormal">X</button>
-        <button type="button" id="#" class="btnNormal">X</button>
-        <button type="button" id="#" class="btnNormal">X</button>
-        <button type="button" id="#" class="btnNormal">X</button>
     </div>
-    <!--<div class="row">
+    <div class="row" *ngFor="let btnZ of botones">
+        <button type="button" id="#" class="btnNormal">X</button>
+        
+     <button type="button" id="#" class="btnNormal">X</button>
         <button type="button" id="#" class="btnNormal">X</button>
         <button type="button" id="#" class="btnNormal">X</button>
         <button type="button" id="#" class="btnNormal">X</button>
@@ -36,8 +44,7 @@
         <button type="button" id="#" class="btnNormal">X</button>
         <button type="button" id="#" class="btnNormal">X</button>
         <button type="button" id="#" class="btnNormal">X</button>
-        <button type="button" id="#" class="btnNormal">X</button>
-        <button type="button" id="#" class="btnNormal">X</button>
+        <button type="button" id="#" class="btnNormal">X</button> 
     </div>
     <div class="row">
         <button type="button" id="#" class="btnNormal">X</button>
@@ -136,5 +143,5 @@
         <button type="button" id="#" class="btnNormal">X</button>
         <button type="button" id="#" class="btnNormal">X</button>
         <button type="button" id="#" class="btnNormal">X</button>
-    </div> -->
-  </div>
+    </div> 
+  </div> 

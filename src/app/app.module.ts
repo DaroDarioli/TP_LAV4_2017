@@ -55,6 +55,8 @@ import { AgmCoreModule } from '@agm/core';
 import { InputJugadoresComponent } from './componentes/input-jugadores/input-jugadores.component';
 import { SexoPipe } from './pipes/sexo.pipe';
 import { CrucigramaDigitalComponent } from './componentes/crucigrama-digital/crucigrama-digital.component';
+import { CambiocolorDirective } from './cambiocolor.directive';
+
 
 @NgModule({
   declarations: [
@@ -81,7 +83,9 @@ import { CrucigramaDigitalComponent } from './componentes/crucigrama-digital/cru
     JugadoresListadoComponent,
     InputJugadoresComponent,
     SexoPipe,
-    CrucigramaDigitalComponent
+    CrucigramaDigitalComponent,
+    CambiocolorDirective,
+    
   ],
   imports: [
     BrowserModule,
