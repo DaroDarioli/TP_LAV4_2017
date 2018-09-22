@@ -33,4 +33,17 @@
 
 .danger{
     background-color: red;
+    
+}
+
+#matriz{
+   padding: 0% 20% 0% 20%; 
+}
+
+#wrapper{
+    text-align: center;
+}
+
+#btnverificar{
+    position: absolute;
 }

@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import { MiHttpService } from '../../servicios/mi-http/mi-http.service'; 
+import {ServicioGamesService} from '../../servicios/servicio-games.service';
+
+
 
 import {Subscription} from "rxjs";
 import {TimerObservable} from "rxjs/observable/TimerObservable";
@@ -24,7 +27,7 @@ export class LoginComponent implements OnInit {
 
   clase="progress-bar progress-bar-info progress-bar-striped ";
 
-  constructor(private MiHttpService:MiHttpService,
+  constructor(private MiServicioGame:ServicioGamesService,private MiHttpService:MiHttpService,
     private route: ActivatedRoute,
     private router: Router) {
       this.progreso=0;
@@ -36,11 +39,16 @@ export class LoginComponent implements OnInit {
   }
 
   Entrar() {
-    //if (this.usuario === 'admin' && this.psw === 'admin') {     
-     //console.log("En funcion entrar")
+    
+    
+    let respuesta = this.MiServicioGame.httpPostP_Game("Logueo","pass="+this.psw+"&usuario="+this.usuario);
 
-     let respuesta = this.MiHttpService.httpPostP("http://localhost/AngularApi/API/loginWEB/login?pass="+this.psw+"&usuario="+this.usuario,Jugador)
+
+    //funciona
+    //let respuesta = this.MiHttpService.httpPostP("http://darodarioli.tech/API/loginWEB/login?pass="+this.psw+"&usuario="+this.usuario,Jugador)
       
+
+
      //console.log(respuesta);
 
 

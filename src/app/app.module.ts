@@ -56,6 +56,7 @@ import { InputJugadoresComponent } from './componentes/input-jugadores/input-jug
 import { SexoPipe } from './pipes/sexo.pipe';
 import { CrucigramaDigitalComponent } from './componentes/crucigrama-digital/crucigrama-digital.component';
 import { CambiocolorDirective } from './cambiocolor.directive';
+import { PPTComponent } from './componentes/ppt/ppt.component';
 
 
 @NgModule({
@@ -85,6 +86,7 @@ import { CambiocolorDirective } from './cambiocolor.directive';
     SexoPipe,
     CrucigramaDigitalComponent,
     CambiocolorDirective,
+    PPTComponent,
     
   ],
   imports: [

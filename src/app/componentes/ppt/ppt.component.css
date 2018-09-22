@@ -1,0 +1,31 @@
+.buttonPPT {
+    
+    border: 5px;
+    border-style: solid;
+    border-color:grey;     
+    padding: 90px 110px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 15%; 
+    margin: 25px;
+}
+
+#tituloPPT{
+    text-align: center;
+    text-decoration-style: dotted;
+    text-decoration-color: dodgerblue;
+}
+
+#btnPapel{
+    background-image: url("../../../assets/imagenes/papel.png");
+}
+
+#btnTijera{
+    background-image: url("../../../assets/imagenes/tijeraEjemplo.png");
+}
+
+#btnPiedra{
+    background-image: url("../../../assets/imagenes/piedra.jpeg");
+}

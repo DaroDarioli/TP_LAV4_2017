@@ -16,21 +16,38 @@ export class AgilidadAritmeticaComponent implements OnInit {
   Tiempo: number;
   repetidor:any;
   private subscription: Subscription;
+
+  private pNumero: number;
+  private sNumero: number;
+  private sOperador:string;
+  private operadores:string[] = ["+","-","*","/"];
+  private respuesta:number;
+
   ngOnInit() {
   }
    constructor() {
      this.ocultarVerificar=true;
      this.Tiempo=5; 
-    this.nuevoJuego = new JuegoAgilidad();
+   
     console.info("Inicio agilidad");  
   }
   NuevoJuego() {
+
+    this.nuevoJuego = new JuegoAgilidad();
+    this.pNumero = this.nuevoJuego.primerNumero;
+    this.sNumero = this.nuevoJuego.segundoNumero;
+    this.sOperador = this.operadores[this.nuevoJuego.operador];
+    
+    
+    
     this.ocultarVerificar=false;
-   this.repetidor = setInterval(()=>{ 
+    this.repetidor = setInterval(()=>{ 
       
       this.Tiempo--;
       console.log("llego", this.Tiempo);
       if(this.Tiempo==0 ) {
+    
+
         clearInterval(this.repetidor);
         this.verificar();
         this.ocultarVerificar=true;
@@ -41,6 +58,17 @@ export class AgilidadAritmeticaComponent implements OnInit {
   }
   verificar()
   {
+    console.log("Tu respuesta: "+this.respuesta);
+    
+    if(this.nuevoJuego.realizarCuenta() == this.respuesta)
+    {
+      console.log("Ganaste!!");
+    }
+
+
+    
+    
+    
     this.ocultarVerificar=false;
     clearInterval(this.repetidor);
    

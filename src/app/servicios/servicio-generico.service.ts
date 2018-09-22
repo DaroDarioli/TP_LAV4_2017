@@ -1,5 +1,6 @@
 import { log } from 'util';
 import { Injectable } from '@angular/core';
+import { MiHttpService } from '../servicios/mi-http/mi-http.service'; 
 
 import { Http, Response } from '@angular/http';
 
@@ -7,32 +8,29 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
+import { Jugador } from '../clases/jugador';
 
-@Injectable()
-export class MiHttpService {
 
-  constructor( public http: Http ) { }
+@Injectable({
+  providedIn: 'root'
+})
+export class ServicioGenericoService {
 
-  public httpGetP ( url: string)
+  url:string = "http://darodarioli.tech/API/loginWEB/"
+
+  constructor(public http: Http) { }
+
+  public httpGet_Generico(tarea:string, parametro:string)
   {
     return this.http
-    .get( url )
+    .get( this.url + tarea + "?" + parametro)
     .toPromise()
     .then( this.extractData )
     .catch( this.handleError );
   }
 
-  public httpPostP( url: string, objeto: any )
-  {
-    return this.http
-    .get( url )
-    .subscribe( data => {
-     // console.log( data );
-      return data;
-    });
-  }
 
-  public httpGetO ( url: string): Observable<Response>
+  public httpGet_Observable ( url: string): Observable<Jugador>
   {
     return this.http.get( url )
       .map( ( res: Response ) => res.json())

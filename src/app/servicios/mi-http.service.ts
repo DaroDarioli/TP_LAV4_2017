@@ -12,7 +12,7 @@ import {Jugador} from './../clases/jugador';
 @Injectable()
 export class MiHttpService {
   
- jugadoresURL:string = "http://localhost/AngularApi/API/loginWEB/registro";
+ jugadoresURL:string = "darodarioli.tech/API/loginWEB/registro";
  
 
   constructor(public http:Http) { }

@@ -1,5 +1,5 @@
 
-import { Component, OnInit , Input, EventEmitter} from '@angular/core';
+import { Component, OnInit , Input,Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-listado-de-resultados',
@@ -8,6 +8,9 @@ import { Component, OnInit , Input, EventEmitter} from '@angular/core';
 })
 export class ListadoDeResultadosComponent implements OnInit {
  @Input()
+
+ //@Output() enviarListado: EventEmitter<any>= new EventEmitter<any>();
+
  listado: Array<any>;
 
 

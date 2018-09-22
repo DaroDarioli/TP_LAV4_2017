@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+import {ServicioGamesService} from '../../servicios/servicio-games.service';
 
 import { MiHttpService } from '../../servicios/mi-http/mi-http.service'; 
 import {Jugador} from '../../clases/jugador';
@@ -24,7 +25,7 @@ export class RegistroComponent implements OnInit {
   usuario:string ='';
   name: string = '';
   psw:string = '';
-  constructor(private MiHttpService:MiHttpService ) { }
+  constructor(private MiServicioGame:ServicioGamesService,private MiHttpService:MiHttpService ) { }
 
   ngOnInit() {
   }
@@ -35,9 +36,19 @@ export class RegistroComponent implements OnInit {
   
   RegistrarUsuario() { 
       
-    console.log("mail: " + this.name + " pass jugador: "+this.psw+" Usuario: "+this.usuario);
-    let respuesta = this.MiHttpService.httpGetP("http://localhost/AngularApi/API/loginWEB/registro?email="+this.name+"&pass="+this.psw+"&usuario="+this.usuario);
-    console.log(respuesta);
-    }
+    let parametrosRegistro = "mail: " + this.name + " pass jugador: "+this.psw+" Usuario: "+this.usuario;
+    let respuesta2 = this.MiServicioGame.httpPostP_Game("Registro",parametrosRegistro);
+    console.log(respuesta2)
+    
+    
+    //console.log("mail: " + this.name + " pass jugador: "+this.psw+" Usuario: "+this.usuario);
+    // let respuesta = this.MiHttpService.httpGetP("http://darodarioli.tech/API/loginWEB/registro?email="+this.name+"&pass="+this.psw+"&usuario="+this.usuario);
+    //console.log(respuesta);
+    
+    
+  }
 
 }
+
+
+// "darodarioli.tech/API/loginWEB/registro";

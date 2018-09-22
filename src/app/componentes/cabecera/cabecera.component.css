@@ -1,7 +1,7 @@
 .panel
 {
     height: 200px;
-    background-image: url("/TP_LAV4_2017/assets/imagenes/cabecera.png");
+    background-image: url("./../../../assets/imagenes/backgroundEjemplo.jpg");    
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -19,7 +19,7 @@ position: absolute;
 top: 50%;
 left: 50%;
 transform: translate(-50%, -50%);
-color: #0C081B;
+color: black;
 }
 
 .hero-text a {

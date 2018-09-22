@@ -7,9 +7,10 @@
     margin: 10px;
     padding-bottom: 10px;
     float: left;
-  background-color: #DEF3A6;
+    background-color: #46F253;
     text-align: center;
 }
+
 
 /* Add rounded corners to the top left and the top right corner of the image */
 img {
@@ -19,6 +20,7 @@ img {
 }/* Add some padding inside the card container */
 .container {
     padding: 2px 16px;
+    background-color: #747474;
 }
 
 
@@ -32,7 +34,7 @@ img {
     cursor: pointer;
     outline: none;
     color: #fff;
-    background-color: #4CAF50;
+    background-color: #0E0057;
     border: none;
     border-radius: 15px;
     box-shadow: 0 9px #999;

@@ -22,7 +22,7 @@ import { ListadoDePaisesComponent } from '../componentes/listado-de-paises/lista
 import { MapaDeGoogleComponent } from '../componentes/mapa-de-google/mapa-de-google.component'
 import { JugadoresListadoComponent } from '../componentes/jugadores-listado/jugadores-listado.component';
 import { CrucigramaDigitalComponent } from '../componentes/crucigrama-digital/crucigrama-digital.component';
-
+import { PPTComponent } from '../componentes/ppt/ppt.component';
 
 // declaro donde quiero que se dirija
 const MiRuteo = [
@@ -44,7 +44,8 @@ children:
       {path: 'AdivinaMasListado' , component: AdivinaMasListadoComponent},
       {path: 'AgilidadaMasListado' , component: AgilidadMasListadoComponent},
       {path: 'Agilidad' , component: AgilidadAritmeticaComponent},
-      {path: 'CrucigramaDigital' , component: CrucigramaDigitalComponent}
+      {path: 'CrucigramaDigital' , component: CrucigramaDigitalComponent},
+      {path: 'PPT',component:PPTComponent}
     ]
 },
 {path: '**' , component: ErrorComponent},
