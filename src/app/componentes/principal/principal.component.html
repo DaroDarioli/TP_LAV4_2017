@@ -5,8 +5,8 @@
  
 <div class="container" >
    
-    <ul class="list-group">
-        <li class="list-group-item list-group-item-danger">
+    <ul id="listadoOpciones" class="list-group">
+        <li id="listadoMenu" class="list-group-item list-group-item-danger">
            
                 <div class="media-body">
                     <div class="hero-text">
@@ -16,7 +16,7 @@
                
              
           </li>
-        <li class="list-group-item list-group-item-success">
+        <li id="listadoJuegos" class="list-group-item list-group-item-success">
           <a routerLink="/Juegos">
             <div class="media">
               <div class="media-left">
@@ -30,7 +30,7 @@
             </div> 
           </a>
         </li>
-        <li class="list-group-item list-group-item-info">
+        <li id="listadoResultados" class="list-group-item list-group-item-info">
             <a routerLink="/Listado">
               <div class="media">
                   <div class="media-left">
@@ -44,21 +44,8 @@
               </div> 
             </a>
           </li>
-        <li class="list-group-item list-group-item-warning">
-          <a routerLink="/Juegos">
-            <div class="media">
-                <div class="media-left">
-                    <img src="./assets/imagenes/Configuracion.png" class="media-object imagenDeMenu" >
-                  </div>
-              <div class="media-body">
-                <h4 class="media-heading">Configuraci&oacute;n</h4>
-                <p>Ajustes de la aplicacion y los métodos de autentificación</p>
-              </div>
-             
-            </div> 
-          </a>
-        </li>
-        <li class="list-group-item list-group-item-warning">
+
+        <li id="listadoJugadores" class="list-group-item list-group-item-warning">
           <a routerLink="/Jugadores">
             <div class="media">
                 <div class="media-left">
@@ -67,6 +54,22 @@
               <div class="media-body">
                 <h4 class="media-heading">Jugadores</h4>
                 <p>Listado de jugadores</p>
+              </div>
+             
+            </div> 
+          </a>
+        </li>
+
+        
+        <li id="listadoConfiguracion" class="list-group-item list-group-item-warning">
+          <a routerLink="/Juegos">
+            <div class="media">
+                <div class="media-left">
+                    <img src="./assets/imagenes/Configuracion.png" class="media-object imagenDeMenu" >
+                  </div>
+              <div class="media-body">
+                <h4 class="media-heading">Configuraci&oacute;n</h4>
+                <p>Ajustes de la aplicacion y los métodos de autentificación</p>
               </div>
              
             </div> 

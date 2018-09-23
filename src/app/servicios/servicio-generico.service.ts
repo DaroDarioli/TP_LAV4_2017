@@ -17,6 +17,7 @@ import { Jugador } from '../clases/jugador';
 export class ServicioGenericoService {
 
   url:string = "http://darodarioli.tech/API/loginWEB/"
+  urlLocal:string = "localhost/AngularApi/API/loginWEB/"
 
   constructor(public http: Http) { }
 
@@ -29,6 +30,14 @@ export class ServicioGenericoService {
     .catch( this.handleError );
   }
 
+  public httpGet_Listado(tarea:string)
+  {
+    return this.http
+    .get( this.url + tarea)
+    .toPromise()
+    .then( this.extractData )
+    .catch( this.handleError );
+  }
 
   public httpGet_Observable ( url: string): Observable<Jugador>
   {

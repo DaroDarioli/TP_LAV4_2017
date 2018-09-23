@@ -39,9 +39,7 @@ export class ProcesaGrilla {
         palabraBuscada.forEach(element => {
             
             if(element.id == casilla.id)
-            {
-                console.log(casilla.contenido);
-                console.log(casilla.seleccionado);
+            {               
                 estaMarcada = casilla.seleccionado;        
             }
 

@@ -64,15 +64,11 @@ export class CrucigramaDigitalComponent implements OnInit {
   
   evaluar()
   {
-
-    let esGanador:boolean = false;
-    this.procesa = new ProcesaGrilla();
-    let palabrasEncontradas = this.procesa.evaluaRespuesta(this.matrizPrincipal,this.matrizRespuestas)
-    console.log(palabrasEncontradas);
- 
+      let esGanador:boolean = false;
+      this.procesa = new ProcesaGrilla();
+      let palabrasEncontradas = this.procesa.evaluaRespuesta(this.matrizPrincipal,this.matrizRespuestas)
+      console.log("Palabras encontradas: "+palabrasEncontradas); 
   }
-
-  
 
   verificar(boton)
   {
@@ -105,21 +101,5 @@ export class CrucigramaDigitalComponent implements OnInit {
       });
 
     }
-
-   // armarMatriz(parametroMatriz: string[])
-    // {
-
-    //       for (let index = 0; index < 10; index++) {
-            
-    //         for (let indexRow = 0; index < 10; indexRow++) {
-    //           //const element = array[index];
-
-    //           //cargo cada una de las líneas de la matriz
-              
-    //         }
-            
-    //       }
-    // }
- 
 
 }

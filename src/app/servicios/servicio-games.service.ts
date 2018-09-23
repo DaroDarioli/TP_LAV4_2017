@@ -23,10 +23,10 @@ export class ServicioGamesService {
 
   constructor(public http: Http,private otroHttpService:MiHttpService,private servicioGenerico:ServicioGenericoService) { }
 
-  public httpPostP_Game( url: string, parametro: any )
+  public httpPostP_Game( tarea: string, parametro: any )
   {
 
-    if(url =="Logueo")
+    if(tarea =="Logueo")
     {
       console.log("El chabón está queriendo ingresar");
       console.log("Los parámetros son: "+parametro);  
@@ -40,12 +40,19 @@ export class ServicioGamesService {
    
 
     }
-    else if(url == "Registro")
+    else if(tarea == "Registro")
     {
       console.log("Estoy en registro game")
-        let respuestaObservable = this.servicioGenerico.httpGet_Observable(url + parametro)
+        let respuestaObservable = this.servicioGenerico.httpGet_Observable(tarea + parametro)
         console.info(respuestaObservable)
     }
+    else if(tarea == "listado")
+    {
+        let respuestaGenerico = this.servicioGenerico.httpGet_Listado("listado")
+        return respuestaGenerico;
+        // console.log(respuestaGenerico{"__zone_symbol__value"};
+    }
+
     else
     {
       console.log("No sabemos qué quiere hacer hacer");
