@@ -1,23 +1,20 @@
-<!-- 
-<script rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-</script> -->
+
 
 <div id="matriz">
     <h1>{{Titulo}}</h1>
 
-    <div id="sopa">
-
-    <ul *ngFor="let linea of matrizPrincipal">
+     <div id="sopa">
+      <ul *ngFor="let linea of matrizPrincipal">
         <ul>
             <button (click)="verificar($event)" class="btnNormal" *ngFor="let obj of linea" [id]="obj.id">
             {{ obj.contenido }}
             </button>
         </ul>
-    </ul><br><br>
-</div>
+    </ul><br><br> 
 
     <div id="wrapper">
         <button type="button" (click)="evaluar($event)" id="btnverificar" class="btn btn-success">Son todas!!</button>
     </div>
 </div>
-    
+</div>
+ 

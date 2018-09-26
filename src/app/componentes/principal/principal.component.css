@@ -1,9 +1,16 @@
 .imagenDeMenu{
-width: 80px;
-height: 70px;
-}
+    width: 80px;
+    height: 70px;
+    border: 2px solid #3f4144;
+    border-radius: 4%;
+    margin-right: 30%;
+    margin-top: 30%;
+   
+    }
+
 p{
     color: #0E0057;
+    margin: 3%;
 }
 
 .hero-text {
@@ -17,6 +24,7 @@ p{
 
     .media-heading{
         color: #0E0057;
+        margin: 3%;
     }
 
     #listadoOpciones{
@@ -33,18 +41,22 @@ p{
     }
     
     #listadoJuegos{
-        background: rgb(83,153,225);        
+        background: rgb(83,153,225);  
+        border: 2px solid #3f4144;      
     }
 
     #listadoResultados{
         background-color: #46F253;
+        border: 2px solid #3f4144;
     }
 
     #listadoConfiguracion{        
         background-color: #46F253;
+        border: 2px solid #3f4144;
     }
 
     #listadoJugadores{
         background: rgb(83,153,225);
+        border: 2px solid #3f4144;
     }
 

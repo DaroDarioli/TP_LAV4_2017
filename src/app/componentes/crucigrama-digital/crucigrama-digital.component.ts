@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {BotonGrilla} from './../../clases/boton-grilla';
 import {ProcesaGrilla} from './../../clases/procesa-grilla';
+import { BootstrapModalModule } from './../../../../node_modules/ngx-bootstrap-modal/index';
+
+import { ModalDirective } from 'ngx-bootstrap/modal';
+
+//ngx-bootstrap/modal';
 
 @Component({
   selector: 'app-crucigrama-digital',
@@ -50,6 +55,8 @@ export class CrucigramaDigitalComponent implements OnInit {
 
   name: string = '';
 
+  crearDetalleModal: boolean;
+
   
   constructor() {    
    }
@@ -59,6 +66,10 @@ export class CrucigramaDigitalComponent implements OnInit {
   ngOnInit() {
 
     console.info("Inico Palabras Rápidas"); 
+
+    // $('#myModal').on('shown.bs.modal', function () {
+    //   $('#myInput').trigger('focus')
+    // })
         
   }
   
@@ -101,5 +112,14 @@ export class CrucigramaDigitalComponent implements OnInit {
       });
 
     }
+
+    
+abrirDetalleModal() {
+  this.crearDetalleModal = true;
+}
+
+cerrarDetalleModal() {
+  this.crearDetalleModal = false;
+}
 
 }
