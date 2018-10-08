@@ -1,5 +1,5 @@
 
-import{ BotonGrilla } from './boton-grilla';   
+import{ BG } from './boton-grilla';   
 
 
 export class ProcesaGrilla {
@@ -32,7 +32,7 @@ export class ProcesaGrilla {
     
     }
 
-    esRespuesta(casilla: BotonGrilla,palabraBuscada:BotonGrilla[]):boolean
+    esRespuesta(casilla: BG,palabraBuscada:BG[]):boolean
     {
         let estaMarcada : boolean = true;   
 

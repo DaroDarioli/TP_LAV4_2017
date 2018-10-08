@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 // importo del module principal
 import { RouterModule, Routes } from '@angular/router';
 import { AdivinaElNumeroComponent } from '../componentes/adivina-el-numero/adivina-el-numero.component';
+import {AnagramaComponent}from '../componentes/anagrama/anagrama.component';
 import { ListadoDeResultadosComponent } from '../componentes/listado-de-resultados/listado-de-resultados.component';
 import { LoginComponent } from '../componentes/login/login.component';
 import { ErrorComponent } from '../componentes/error/error.component';
@@ -45,6 +46,7 @@ children:
       {path: 'AgilidadaMasListado' , component: AgilidadMasListadoComponent},
       {path: 'Agilidad' , component: AgilidadAritmeticaComponent},
       {path: 'CrucigramaDigital' , component: CrucigramaDigitalComponent},
+      {path:'Anagrama',component:AnagramaComponent},
       {path: 'PPT',component:PPTComponent}
     ]
 },

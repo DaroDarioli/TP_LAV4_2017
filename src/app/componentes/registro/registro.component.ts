@@ -22,6 +22,7 @@ export class RegistroComponent implements OnInit {
   });*/
 
   unJugador:Jugador;
+  res:boolean;
   usuario:string ='';
   name: string = '';
   psw:string = '';
@@ -30,25 +31,16 @@ export class RegistroComponent implements OnInit {
   ngOnInit() {
   }
 
-  
-  //1- Lo paso en el constructor
-  //2- lo utilizo como instancia this.http.Agregar(parametro)
-  
-  RegistrarUsuario() { 
-      
-    let parametrosRegistro = "mail: " + this.name + " pass jugador: "+this.psw+" Usuario: "+this.usuario;
-    let respuesta2 = this.MiServicioGame.httpPostP_Game("Registro",parametrosRegistro);
-    console.log(respuesta2)
+   RegistrarUsuario() { 
     
-    
-    //console.log("mail: " + this.name + " pass jugador: "+this.psw+" Usuario: "+this.usuario);
-    // let respuesta = this.MiHttpService.httpGetP("http://darodarioli.tech/API/loginWEB/registro?email="+this.name+"&pass="+this.psw+"&usuario="+this.usuario);
-    //console.log(respuesta);
-    
-    
+    this.unJugador = new Jugador();
+
+   let parametrosRegistro = "?email=" + this.name + "&pass="+this.psw+"&usuario="+this.usuario;
+   let respuesta =   this.MiServicioGame.httpGet_Game("Registro",parametrosRegistro);
+    console.log(respuesta)
+   
+   
   }
 
 }
 
-
-// "darodarioli.tech/API/loginWEB/registro";

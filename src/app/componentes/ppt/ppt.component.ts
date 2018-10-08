@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { and } from '@angular/router/src/utils/collection';
+import {ServicioGamesService} from '../../servicios/servicio-games.service';
 
 @Component({
   selector: 'app-ppt',
@@ -11,7 +12,7 @@ export class PPTComponent implements OnInit {
   eleccion:string;
   eleccionMaquina:string;
 
-  constructor() { }
+  constructor(private MiServicioGame:ServicioGamesService) { }
 
   ngOnInit() {
   }
@@ -43,6 +44,9 @@ export class PPTComponent implements OnInit {
       if(arrayPPT[eleccionNumero] == "Piedra") 
       {
         console.log("Ganaste!!");
+        let idJugador = localStorage.getItem("iDjugadorLogueado");
+
+        let respuesta = this.MiServicioGame.httpGet_Game("ActualizarPuntaje","jugador="+idJugador+"&juego=PPT&puntaje=1");
       }
       else if(arrayPPT[eleccionNumero] == "Papel")
       {

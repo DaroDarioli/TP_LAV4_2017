@@ -25,8 +25,9 @@
               "src/assets/imagenes/gonzo.jpg"
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.min.js"
-            
+              "./node_modules/jquery/dist/jquery.min.js",            
+                "../node_modules/bootstrap/dist/js/bootstrap.js"
+
             ],
             "styles": [              
               "src/styles.css",
@@ -82,7 +83,10 @@
               "./node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
-              "./node_modules/jquery/dist/jquery.min.js"
+              "./node_modules/jquery/dist/jquery.min.js",            
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
+              "./node_modules/bootstrap/js/dist/js"
+
             ],
             "assets": [
               "src/favicon.ico",

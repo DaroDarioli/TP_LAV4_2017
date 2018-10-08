@@ -12,6 +12,11 @@
     background-color:#71E563
 }
 
+h1{
+    font-family: 'Gloria Hallelujah', cursive; 
+    color: #0E0057;
+    font-size:60px;
+}
 
 .hero-text {
 text-align: center;

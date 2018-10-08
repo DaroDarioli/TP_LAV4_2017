@@ -1,14 +1,16 @@
 export class Jugador {
+    
+    "id":number;
 
     "usuario":string;
 
-    "nombre": string;
-
-    "apellido": string;
-     
     "email":string;
 
+    "nombre": string;
+
+    "apellido": string;     
+    
     "pass":string;
 
-    "Puntaje":number;
+    "puntaje":string;
 }

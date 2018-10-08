@@ -19,44 +19,53 @@ import 'rxjs/add/operator/toPromise';
 export class ServicioGamesService {
 
 
-  unJugador:Jugador;
+  private respuestaGenerica:any = "opción fallida";
+  unJugador:Jugador = new Jugador()
+  private unaRespuesta:any;
 
   constructor(public http: Http,private otroHttpService:MiHttpService,private servicioGenerico:ServicioGenericoService) { }
 
-  public httpPostP_Game( tarea: string, parametro: any )
+  public httpGet_Game( tarea: string, parametro: any )
   {
+    
 
-    if(tarea =="Logueo")
+    if(tarea == "Logueo")
     {
-      console.log("El chabón está queriendo ingresar");
-      console.log("Los parámetros son: "+parametro);  
-
-      let respuestaGenerico = this.servicioGenerico.httpGet_Generico("login",parametro)
-      console.log(respuestaGenerico.then());
-
-      //let momentaneoBorrar:object;
-     // let respuesta = this.otroHttpService.httpPostP("http://darodarioli.tech/API/loginWEB/login?"+parametro,momentaneoBorrar)
-     // console.log(respuesta);
-   
-
+      this.respuestaGenerica = this.servicioGenerico.TraerUsuario("login?" + parametro)
+      .then((d:any[])=>{
+        this.unaRespuesta = d;
+        console.log(this.unaRespuesta);
+        this.unJugador = this.unaRespuesta.elJugador;
+        localStorage.setItem("jugadorLogueado",this.unJugador.usuario);
+        localStorage.setItem("iDjugadorLogueado",this.unJugador.id.toString());
+      })      
     }
     else if(tarea == "Registro")
     {
-      console.log("Estoy en registro game")
-        let respuestaObservable = this.servicioGenerico.httpGet_Observable(tarea + parametro)
-        console.info(respuestaObservable)
+      this.respuestaGenerica = this.servicioGenerico.RegistrarUsuario("registro" + parametro)      
     }
-    else if(tarea == "listado")
+    else if(tarea == "Listado")
     {
-        let respuestaGenerico = this.servicioGenerico.httpGet_Listado("listado")
-        return respuestaGenerico;
-        // console.log(respuestaGenerico{"__zone_symbol__value"};
+      this.respuestaGenerica = this.servicioGenerico.TraeListado("listado");
     }
-
+    else if(tarea == "ActualizarPuntaje")
+    {
+      this.respuestaGenerica = this.servicioGenerico.ActualizarPuntajeJugador(parametro);
+    }
+    else if(tarea == "ListadoResultados")
+    {
+      this.respuestaGenerica = this.servicioGenerico.TraerPuntajes()
+      // .then((listado:any[])=>{
+        
+      //   console.log(listado);
+        
+      // })    
+    }
     else
     {
       console.log("No sabemos qué quiere hacer hacer");
     }
+    return this.respuestaGenerica;
 
   }
 

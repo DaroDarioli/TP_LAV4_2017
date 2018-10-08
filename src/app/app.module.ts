@@ -8,6 +8,7 @@ import { LoginComponent } from './componentes/login/login.component';
 //  import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { HttpModule } from '@angular/http';
 import {HttpClientModule} from '@angular/common/http';
+import {HttpClient} from '@angular/common/http';
 
 // import { AccordionModule } from 'ngx-bootstrap';
 // agrego las clases para utilizar ruteo
@@ -94,15 +95,17 @@ import { PPTComponent } from './componentes/ppt/ppt.component';
     FormsModule,
     RuteandoModule,
     HttpModule,
-    HttpClientModule,
+    HttpClientModule,  
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys'
+      apiKey: 'AIzaSyB6f8x4IjRlesQ3oETc6BXYQHVRTOlY3Ys',
+
+   
     })
     // NgbModule.forRoot(MiRuteo),
     // importo el ruteo
     // RouterModule.forRoot(MiRuteo)
   ],
-  providers: [ JuegoServiceService, MiHttpService,PaisesService,ArchivosJugadoresService,JugadoresService],
+  providers: [  HttpClient,JuegoServiceService, MiHttpService,PaisesService,ArchivosJugadoresService,JugadoresService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

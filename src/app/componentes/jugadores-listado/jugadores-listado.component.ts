@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JugadoresService } from '../../servicios/jugadores.service';
+import {ServicioGamesService} from '../../servicios/servicio-games.service';
+
 @Component({
   selector: 'app-jugadores-listado',
   templateUrl: './jugadores-listado.component.html',
@@ -10,14 +12,22 @@ export class JugadoresListadoComponent implements OnInit {
   listado:any
   miJugadoresServicio:JugadoresService
   
-    constructor(serviceJugadores:JugadoresService) {
+    constructor(serviceJugadores:JugadoresService,private MiServicioGame:ServicioGamesService) {
       this.miJugadoresServicio = serviceJugadores;
       
     }
     
-
+    list:any[];
 
   ngOnInit() {
+
+    this.MiServicioGame.httpGet_Game("Listado","")
+    .then((d:any[])=>{
+      this.listado = d;
+      console.log(this.listado);
+    })
+
+
   }
 
 

@@ -41,8 +41,8 @@ export class LoginComponent implements OnInit {
   Entrar() {
     
     
-    let respuesta = this.MiServicioGame.httpPostP_Game("Logueo","pass="+this.psw+"&usuario="+this.usuario);
-
+    let respuesta = this.MiServicioGame.httpGet_Game("Logueo","pass="+this.psw+"&usuario="+this.usuario);
+   // console.log(respuesta);
 
     //funciona
     //let respuesta = this.MiHttpService.httpPostP("http://darodarioli.tech/API/loginWEB/login?pass="+this.psw+"&usuario="+this.usuario,Jugador)

@@ -20,11 +20,19 @@ p{
     left: 50%;
     transform: translate(-50%, -50%);
     color: #0E0057;
+    padding: 40% 0% 40% 0%;
     }
 
     .media-heading{
         color: #0E0057;
         margin: 3%;
+    }
+
+    .list-group-item:hover{
+        -ms-transform: scale(1.03,1.03); /* IE 9 */
+        -webkit-transform: scale(1.03,1.03); /* Safari */
+        transform: scale(1.03,1.03);
+        border: 2.5px solid #0c62e4; 
     }
 
     #listadoOpciones{
@@ -38,16 +46,19 @@ p{
     #listadoMenu{
         background-color: #747474;
         height: 30px;
+        font-family: 'Gloria Hallelujah', cursive;
     }
     
     #listadoJuegos{
         background: rgb(83,153,225);  
         border: 2px solid #3f4144;      
+        font-family: 'Gloria Hallelujah', cursive;
     }
 
     #listadoResultados{
         background-color: #46F253;
         border: 2px solid #3f4144;
+        font-family: 'Gloria Hallelujah', cursive;
     }
 
     #listadoConfiguracion{        
@@ -58,5 +69,6 @@ p{
     #listadoJugadores{
         background: rgb(83,153,225);
         border: 2px solid #3f4144;
+        font-family: 'Gloria Hallelujah', cursive; 
     }
 

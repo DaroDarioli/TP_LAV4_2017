@@ -32,7 +32,10 @@ export class MenuCardComponent implements OnInit {
         break;//Crucigrama
         case 'PPT':
           this.router.navigate(['/Juegos/PPT']);
-        break;//Crucigrama
+        break;
+      case 'Anagrama':
+        this.router.navigate(['/Juegos/Anagrama']);
+      break;//Crucigrama
     }
   }
 }

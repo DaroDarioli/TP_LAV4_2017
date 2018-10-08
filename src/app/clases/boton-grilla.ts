@@ -1,4 +1,4 @@
-export class BotonGrilla{
+export class BG{
 
     id: string;
     seleccionado:boolean = false;
@@ -8,9 +8,8 @@ export class BotonGrilla{
       
 
 
-    constructor(pId:string,pSelect:boolean,pCont:string){
-        this.id = pId;
-        this.seleccionado = pSelect;
+    constructor(pId:string,pCont:string){
+        this.id = pId;        
         this.contenido = pCont;   
 
     }
@@ -21,15 +20,15 @@ export class BotonGrilla{
     evaluaRespuesta()
     {
 
-    let  _H0 = new BotonGrilla("H0",false,"H");
-    let  _H1 = new BotonGrilla("H1",false,"O");
-    let  _H2 = new BotonGrilla("H2",false,"L");
-    let  _H3 = new BotonGrilla("H3",false,"A");
-    let  _H4 = new BotonGrilla("H4",false,"X");
-    let  _H5 = new BotonGrilla("H5",false,"X");
-    let  _H6 = new BotonGrilla("H6",false,"X");
-    let  _H7 = new BotonGrilla("H7",false,"X");
-    let  _H8 = new BotonGrilla("H8",false,"X");
+    let  _H0 = new BG("H0","H");
+    let  _H1 = new BG("H1","O");
+    let  _H2 = new BG("H2","L");
+    let  _H3 = new BG("H3","A");
+    let  _H4 = new BG("H4","X");
+    let  _H5 = new BG("H5","X");
+    let  _H6 = new BG("H6","X");
+    let  _H7 = new BG("H7","X");
+    let  _H8 = new BG("H8","X");
         
       
      let  linea1 = [_H8,_H8,_H8,_H8,_H8,_H8,_H8,_H8,_H8,_H8];
