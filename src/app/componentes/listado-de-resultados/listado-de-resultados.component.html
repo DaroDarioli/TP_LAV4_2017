@@ -12,6 +12,7 @@
         <th>Jugador</th>
         <th>Juego</th>
         <th>Puntos</th>
+        <th>Gano/Perdio</th>
       </tr>
     </thead>
     <tbody>
@@ -19,8 +20,8 @@
         <td>{{juego.id_jugador}} </td>
         <td>{{juego.juego}} </td> 
         <td>{{juego.puntaje}} </td> 
-        <td *ngIf="juego.gano">Gano </td>   
-        <td *ngIf="!juego.gano">Perdio</td>     
+        <td *ngIf="juego.puntaje != 0 ">Gano </td>   
+        <td *ngIf="juego.puntaje == 0 ">Perdio</td>     
       </tr>
      
     </tbody>

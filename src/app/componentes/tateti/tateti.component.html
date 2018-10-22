@@ -1,0 +1,43 @@
+<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+<link rel="stylesheet" href="//brick.a.ssl.fastly.net/Roboto:400" />
+
+<script>
+  // Get the modal
+  var modal = document.getElementById('id05');
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+
+<div id="id05" class="modal">
+  <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">×</span>
+  <form class="modal-content animate">
+    <div class="container">
+      <h3 id="mensajeModal"></h3>
+
+      <div class="clearfix">
+        <a type="button" class="btn" onclick="document.getElementById('id05').style.display='none'">Volver al juego</a>
+        <a type="button" class="btn" routerLink="/Principal">Ir a menu de inicio</a>
+      </div>
+
+    </div>
+  </form>
+</div> 
+
+
+<div style='margin-left:38%;'>
+    <h1 style='padding:40px;margin-left:70px;'>Ta-te-ti</h1>
+ 
+    <div id="tictactoe"></div>
+
+    <div align="left">
+      <span id='turn'>Jugador X</span>
+    </div>
+
+</div>

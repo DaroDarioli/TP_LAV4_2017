@@ -39,8 +39,7 @@ export class LoginComponent implements OnInit {
   }
 
   Entrar() {
-    
-    
+        
     let respuesta = this.MiServicioGame.httpGet_Game("Logueo","pass="+this.psw+"&usuario="+this.usuario);
    // console.log(respuesta);
 

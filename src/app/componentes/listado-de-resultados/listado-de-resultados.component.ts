@@ -1,6 +1,6 @@
 
-import { Component, OnInit , Input,Output, EventEmitter} from '@angular/core';
-import {ServicioGamesService} from '../../servicios/servicio-games.service';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { ServicioGamesService } from '../../servicios/servicio-games.service';
 
 
 @Component({
@@ -9,26 +9,26 @@ import {ServicioGamesService} from '../../servicios/servicio-games.service';
   styleUrls: ['./listado-de-resultados.component.css']
 })
 export class ListadoDeResultadosComponent implements OnInit {
- @Input()
+  @Input()
 
- //@Output() enviarListado: EventEmitter<any>= new EventEmitter<any>();
+  //@Output() enviarListado: EventEmitter<any>= new EventEmitter<any>();
 
- listado: Array<any>;
- lista:any[];
+  listado: Array<any>;
+  lista: any[];
 
-  constructor(private MiServicioGame:ServicioGamesService) {
-   }
+  constructor(private MiServicioGame: ServicioGamesService) {
+  }
 
   ngOnInit() {
 
     //consultar base y traer jugadores y puntos
-    let respuesta = this.MiServicioGame.httpGet_Game("ListadoResultados","")
-    .then((listado:any[])=>{
-        
-      console.log(listado);
-      this.lista = listado;
-      
-    }) 
+    let respuesta = this.MiServicioGame.httpGet_Game("ListadoResultados", "")
+      .then((listado: any[]) => {
+
+        console.log(listado);
+        this.lista = listado;
+
+      })
     //this.lista = respuesta;
   }
 

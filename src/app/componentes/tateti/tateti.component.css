@@ -1,71 +1,59 @@
-.body{
-    background-color: #747474;
+table {
+	border-collapse:collapse;
 }
 
-.formContenido{
-    color: rgb(53, 52, 52);/*  */
-}
-
-.formJuego{
-    background-color: #46F253;
-    width: 80%;
-    height: 80%;
-    background: rgb(83,153,225);  
-    border-radius: 2%;
-    margin: 5% 10%;
-    font-family: 'Gloria Hallelujah', cursive;
-    color: #0E0057;
-    border: solid #0E0057;
-    box-shadow: 10px 10px;
-    padding: 3% 10%;
+td {
+	background-color: black;
+	border: 3px solid #0E0057;
+	font-size:80px;
+	color:#ffffff;
+	border-radius: 10px 10px 10px 10px;
 }
 
 h1{
     font-family: 'Gloria Hallelujah', cursive;
-    text-align: center;     
-      
+    font-size: 40px;
+    color: #0E0057;
 }
 
 #mensajeModal{
-  font-family: 'Gloria Hallelujah', cursive;
-  text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 40px;
+    color: #0E0057; 
+    text-align: center;
+    padding: 5%;
 }
 
-input[type=text], input[type=password] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+#tictactoe{
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 40px;
+    color: #0E0057;
+    background: rgb(83,153,225);
+    width: 360px;  
 }
 
-/* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
+#tictactoe:td{
+    border: 15px solid #0E0057;
 }
 
-/* Extra styles for the cancel button */
-.cancelbtn {
-    padding: 14px 20px;
-    background-color: #f44336;
+
+.formJuego{
+    background-color: #46F253;
+    /* width: 80%;
+    height: 80%; */
+    background: rgb(83,153,225);  
+    border-radius: 2%;
+    /* margin: 10% 10%; */
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 15px;
+    color: #0E0057;
+    border: solid #0E0057;
+    box-shadow: 10px 10px;
+    /* padding: 10% 10%; */
 }
 
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn,.signupbtn {float:left;width:50%}
+/*  */
 
-/* Add padding to container elements */
-.container {
-    padding: 16px;
-}
-
-/* The Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -88,7 +76,26 @@ button {
     width: 98%; /* Could be more or less, depending on screen size */
 }
 
+
 /* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+.clearfix {
+  margin: 0% 0% 0% 30%;
+}
 .close {
     position: absolute;
     right: 35px;
@@ -133,14 +140,14 @@ button {
 }
 @import url(https://fonts.googleapis.com/css?family=Indie+Flower);
 
-/* h1 {
-  margin: 50px 0;
+ #turn {
+  
   color: #fff;
   font-family: 'Indie Flower', cursive;
   font-size: 48px;
   font-weight: normal;
   text-align: center;
-} */
+}
 
 .btn-container {
   position: absolute;

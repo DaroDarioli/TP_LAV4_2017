@@ -5,13 +5,29 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
   templateUrl: './menu-card.component.html',
   styleUrls: ['./menu-card.component.css']
 })
+
+
 export class MenuCardComponent implements OnInit {
 
+private mensajeModal:string = "Necesitas estas logueado para poder jugar";
+  
   constructor(private route: ActivatedRoute,
     private router: Router) { }
 
 
   ngOnInit() {
+
+    console.log("Paso por menu card");
+
+    let tokenLogueado = localStorage.getItem('token');
+    console.log(tokenLogueado);
+
+    if(tokenLogueado == 'undefined' || tokenLogueado === null)
+    {
+     console.log("Entra");
+      document.getElementById('id03').style.display = 'block'
+    }
+
   }
   Juego(tipo: string) {
     switch (tipo) {
@@ -36,6 +52,9 @@ export class MenuCardComponent implements OnInit {
       case 'Anagrama':
         this.router.navigate(['/Juegos/Anagrama']);
       break;//Crucigrama
+      case 'Tateti':
+      this.router.navigate(['/Juegos/Tateti']);
+    break;//Crucigrama
     }
   }
 }

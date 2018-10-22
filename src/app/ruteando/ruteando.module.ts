@@ -24,6 +24,7 @@ import { MapaDeGoogleComponent } from '../componentes/mapa-de-google/mapa-de-goo
 import { JugadoresListadoComponent } from '../componentes/jugadores-listado/jugadores-listado.component';
 import { CrucigramaDigitalComponent } from '../componentes/crucigrama-digital/crucigrama-digital.component';
 import { PPTComponent } from '../componentes/ppt/ppt.component';
+import {TatetiComponent} from '../componentes/tateti/tateti.component';
 
 // declaro donde quiero que se dirija
 const MiRuteo = [
@@ -47,7 +48,8 @@ children:
       {path: 'Agilidad' , component: AgilidadAritmeticaComponent},
       {path: 'CrucigramaDigital' , component: CrucigramaDigitalComponent},
       {path:'Anagrama',component:AnagramaComponent},
-      {path: 'PPT',component:PPTComponent}
+      {path: 'PPT',component:PPTComponent},
+      {path: 'Tateti',component:TatetiComponent}
     ]
 },
 {path: '**' , component: ErrorComponent},

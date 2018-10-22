@@ -23,6 +23,7 @@ export class AnagramaComponent implements OnInit {
   private nombreJuego = "Anagrama";
   private nuevoJuego:any; // = {palabraAnagrama: "cripvajats", palabraRespuesta: "javascript"};
   private palabraIngresada = "";
+  private mensajeResultado:string = "";
 
   constructor(private MiServicioGame:ServicioGamesService) { }
 
@@ -40,14 +41,19 @@ export class AnagramaComponent implements OnInit {
     if(this.palabraIngresada == this.nuevoJuego.palabraRespuesta)
     {
       
-      console.log("Bien wachin le pegaste");
+      this.mensajeResultado = "Felicitaciones, esa era la palabra!!";
       //http://localhost:8080/Resto/API/log/puntos/actualizar?jugador=1&juego=PPT&puntaje=2
       let idJugador = localStorage.getItem("iDjugadorLogueado");
 
       let respuesta = this.MiServicioGame.httpGet_Game("ActualizarPuntaje","jugador="+idJugador+"&juego=Anagrama&puntaje=1");
 
     }
+    else
+    {
+      this.mensajeResultado = "Palabra Incorrecta"
+    }
 
+    document.getElementById('id02').style.display='block'
     console.log("En verificar palabra");
   }
 

@@ -58,6 +58,7 @@ import { SexoPipe } from './pipes/sexo.pipe';
 import { CrucigramaDigitalComponent } from './componentes/crucigrama-digital/crucigrama-digital.component';
 import { CambiocolorDirective } from './cambiocolor.directive';
 import { PPTComponent } from './componentes/ppt/ppt.component';
+import { TatetiComponent } from './componentes/tateti/tateti.component';
 
 
 @NgModule({
@@ -88,6 +89,7 @@ import { PPTComponent } from './componentes/ppt/ppt.component';
     CrucigramaDigitalComponent,
     CambiocolorDirective,
     PPTComponent,
+    TatetiComponent,
     
   ],
   imports: [

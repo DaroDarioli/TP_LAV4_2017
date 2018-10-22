@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 
 @Component({
@@ -11,11 +12,12 @@ export class PrincipalComponent implements OnInit {
     isFirstOpen: true,
     isFirstDisabled: false
   };
-  constructor() {  }
+  constructor(private router:Router) {  }
 
   ngOnInit() {
   }
 
+ 
  
 
 }

@@ -34,7 +34,8 @@ export class ServicioGamesService {
       this.respuestaGenerica = this.servicioGenerico.TraerUsuario("login?" + parametro)
       .then((d:any[])=>{
         this.unaRespuesta = d;
-        console.log(this.unaRespuesta);
+        console.log(this.unaRespuesta.token);
+        localStorage.setItem("token",this.unaRespuesta.token);
         this.unJugador = this.unaRespuesta.elJugador;
         localStorage.setItem("jugadorLogueado",this.unJugador.usuario);
         localStorage.setItem("iDjugadorLogueado",this.unJugador.id.toString());
